@@ -1,3 +1,60 @@
 body {
   background: blanchedalmond;
+  color: white;
 }
+
+.container {
+  display: flex;
+  min-height: 98vh;
+  flex-direction: column;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+p {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.a {
+  background-color: red;
+  width: 100%;
+  height: 20vh;
+}
+
+.b {
+  background-color: blue;
+  width: 100%;
+  height: 70vh;
+}
+
+.c {
+  background-color: green;
+  width: 100%;
+  height: 10vh;
+}
+
+@media (min-width: 600px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .a {
+    order: 1;
+  }
+
+  .b {
+    order: 1;
+    flex: 3 0 70%;
+    height: 80vh;
+  }
+  
+  .c {
+    order: 2;
+    flex: 1 0 30%;
+    height: 80vh;
+    }
+  }
